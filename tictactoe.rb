@@ -70,24 +70,35 @@ class Tictactoe
 	
 	def startGame()
 		counter = 0
-		gracz = 'x'
+		player = 'x'
 		begin
 			begin
 				system ('cls')
 				printBoard()
 				if counter%2 == 0
-					gracz = 'X'
+					player = 'X'
 				else
-					gracz = 'O'
+					player = 'O'
 				end
-				puts "podaj współżedne pola graczu #{gracz}"
-				pozycja = setPosition(gracz)
-			end while !pozycja
+				puts "Podaj współżędne pola graczu #{player}"
+				position = setPosition(player)
+			end while !position
 			counter += 1
-		end while (!whoWins() and counter<9) 
+			win = whoWins()
+		end while (!win and counter<9) 
+
+		if counter == 9 and !win
+			endGame("remis")
+		else
+			endGame(player)
+		end
+	end
 		
-		if counter<9
-			puts "Gratuluje wygrał gracz #{gracz}"
+	def endGame(wins)
+		system ('cls')
+		printBoard()
+		if wins != "remis"
+			puts "Gratuluje wygrał gracz #{wins}"
 		else
 			puts "REMIS"
 		end
