@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ruby-graphviz (1.2.3)
+
+PLATFORMS
+  ruby
+  x64-mingw32
+
+DEPENDENCIES
+  ruby-graphviz
+
+BUNDLED WITH
+   1.16.0
