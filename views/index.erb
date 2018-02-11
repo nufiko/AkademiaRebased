@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="<%= url("/style.css")%>" >
+    </head>
+    <body>
+    <h1>Gra w życie</h1>
+    <form method="post" action="/">
+    <% for i in 0..GAME_SIZE - 1 %>
+    <p>
+        <% for k in 0..GAME_SIZE - 1 %>
+            <input type="checkbox" name='box[]' <%= @board[i][k] == 1 ? "checked" : "" %> value=<%= i.to_s+k.to_s %>>
+        <% end %>
+    </p>
+    <% end %>
+    <input type="submit" Value="Kolejny etap">
+    </form>
+    <p><a href="/">Zacznij od nowa</a></p> 
+    <p><a href="random">Losuj pola</a></p>
+    </body>
+</html>
