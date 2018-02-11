@@ -1,0 +1,57 @@
+html {
+	font-size : 62.5%;
+}
+
+body {
+	font-size : 2rem;
+	background-color : rgb(136, 219, 120);
+	color : rgb(101, 13, 184);
+	padding : 0;
+}
+
+h1 {
+    font-size : 4rem;
+    color: crimson;
+}
+
+form {
+	display: block;
+	margin: 0 auto;
+}
+
+p {
+	margin: 0 auto;
+	align-items: center;
+}
+
+a {
+	color : rgb(98, 0, 255);
+	background-color: chartreuse;
+	text-decoration : none;
+	font-size: 1.5rem;
+	border: chartreuse solid 2px;
+}
+
+input [type="checkbox"] {
+	display : none;
+}
+
+input [type="checkbox"]:checked {
+	display : inline-block;
+	content : '';
+	border : 1px solid;
+	width : 10px;
+	height : 10px;
+	margin : 0 5px;
+	background-color : hsl(263, 79%, 46%);
+}
+
+input [type="checkbox"]:not(:checked) {
+	display : inline-block;
+	content : '';
+	border : 1px solid;
+	width : 10px;
+	height : 10px;
+	margin : 0 5px;
+	background-color : rgb(189, 17, 17);
+}
